@@ -1,7 +1,11 @@
 import '#Config/dotenv.config.js'
 import myServer from '#Config/http.js'
-console.log(process.env.PORT)
+import connectDB from '#Config/db.js'
 
-myServer.listen(process.env.PORT, () => {
-  console.log(`Server listening in port ${process.env.PORT}`)
-})
+const start = async (PORT, dburl) => {
+  await connectDB(dburl)
+  myServer.listen(PORT, () => {
+    console.log(`Server listening in port ${process.env.PORT}`)
+  })
+}
+start(process.env.PORT || 3300, process.env.DBURL)

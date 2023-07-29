@@ -36,6 +36,8 @@
   },
   "imports":{
     "#Config/*": "./src/config/*",
-    "#Controllers/*": "./src/controllers/*"
+    "#Controllers/*": "./src/controllers/*",
+    "#Schemas/*": "./src/schemas/*",
+    "#Validations/*": "./src/validations/*"
   }
 }
