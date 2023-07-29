@@ -1,0 +1,41 @@
+{
+  "name": "seagull-hotel-back",
+  "version": "1.0.0",
+  "description": "Backend server for Seagull hotel project",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "lint": "eslint src/**/*.js --fix",
+    "prettier": "prettier --write .",
+    "correct": "npm run prettier & npm run lint",
+    "build": "node src/index.js"
+  },
+  "keywords": [
+    "seagullhotel",
+    "LopCuns",
+    "nodejs",
+    "express",
+    "backend",
+    "webdev"
+  ],
+  "author": "LopCuns",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.0",
+    "standard": "^17.1.0"
+  },
+  "dependencies": {
+    "ajv": "8.12.0",
+    "ajv-errors": "3.0.0",
+    "ajv-formats": "2.1.1",
+    "dotenv": "16.3.1",
+    "express": "4.18.2",
+    "mongoose": "7.4.1"
+  },
+  "imports":{
+    "#Config/*": "./src/config/*",
+    "#Controllers/*": "./src/controllers/*"
+  }
+}
