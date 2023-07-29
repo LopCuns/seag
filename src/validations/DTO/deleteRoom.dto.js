@@ -1,5 +1,9 @@
 import createDTO from './createDTO.js'
-import { typeError, requiredError, noAdditionalError } from '#Validations/errors/dto.errors.js'
+import {
+  typeError,
+  requiredError,
+  noAdditionalError
+} from '#Validations/errors/dto.errors.js'
 import { roomTypeSchema, roomNameSchema } from './lib.dto.js'
 
 const deleteRoomSchema = {
@@ -7,7 +11,10 @@ const deleteRoomSchema = {
   properties: {
     roomType: roomTypeSchema,
     roomName: roomNameSchema,
-    masterKey: { type: 'string', errorMessage: typeError('masterKey', 'string(cadena de texto)') }
+    masterKey: {
+      type: 'string',
+      errorMessage: typeError('masterKey', 'string(cadena de texto)')
+    }
   },
   required: ['roomType', 'roomName', 'masterKey'],
   additionalProperties: false,

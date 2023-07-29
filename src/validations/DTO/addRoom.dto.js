@@ -1,5 +1,13 @@
-import { typeError, requiredError, noAdditionalError } from '#Validations/errors/dto.errors.js'
-import { roomTypeSchema, roomNameSchema, reservationsSchema } from './lib.dto.js'
+import {
+  typeError,
+  requiredError,
+  noAdditionalError
+} from '#Validations/errors/dto.errors.js'
+import {
+  roomTypeSchema,
+  roomNameSchema,
+  reservationsSchema
+} from './lib.dto.js'
 import createDTO from './createDTO.js'
 
 const addRoomSchema = {
@@ -8,7 +16,10 @@ const addRoomSchema = {
     roomType: roomTypeSchema,
     roomName: roomNameSchema,
     reservations: reservationsSchema,
-    masterKey: { type: 'string', errorMessage: typeError('masterKey', 'string(cadena de texto)') }
+    masterKey: {
+      type: 'string',
+      errorMessage: typeError('masterKey', 'string(cadena de texto)')
+    }
   },
   required: ['roomType', 'roomName', 'reservations', 'masterKey'],
   additionalProperties: false,

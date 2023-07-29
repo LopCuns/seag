@@ -1,5 +1,8 @@
 import { roomTypeSchema, roomNameSchema, dateSchema } from './lib.dto.js'
-import { noAdditionalError, requiredError } from '#Validations/errors/dto.errors.js'
+import {
+  noAdditionalError,
+  requiredError
+} from '#Validations/errors/dto.errors.js'
 import createDTO from './createDTO.js'
 
 const reserveSchema = {

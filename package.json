@@ -34,7 +34,7 @@
     "express": "4.18.2",
     "mongoose": "7.4.1"
   },
-  "imports":{
+  "imports": {
     "#Config/*": "./src/config/*",
     "#Controllers/*": "./src/controllers/*",
     "#Schemas/*": "./src/schemas/*",

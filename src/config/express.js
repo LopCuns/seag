@@ -10,8 +10,14 @@ const expressApp = express()
 expressApp.use(express.json())
 
 expressApp.post('/addRoom', addRoomDTO, addRoomController)
-expressApp.get('/checkDisponibility', emptyBodyDTO, (req, res) => res.status(200).send(':)'))
-expressApp.patch('/reserve', reserveDTO, checkRoomExistance, (req, res) => res.status(200).send(req.body))
-expressApp.delete('/deleteRoom', deleteRoomDTO, (req, res) => res.status(200).send('eliminada'))
+expressApp.get('/checkDisponibility', emptyBodyDTO, (req, res) =>
+  res.status(200).send(':)')
+)
+expressApp.patch('/reserve', reserveDTO, checkRoomExistance, (req, res) =>
+  res.status(200).send(req.body)
+)
+expressApp.delete('/deleteRoom', deleteRoomDTO, (req, res) =>
+  res.status(200).send('eliminada')
+)
 
 export default expressApp

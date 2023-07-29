@@ -41,8 +41,10 @@ const reservationsSchema = {
     },
     errorMessage: {
       type: typeError('reservations/dates', 'array'),
-      minItems: 'reservations/dates solo debe contener dos fechas (llegada y salida)',
-      maxItems: 'reservations/dates solo debe contener dos fechas (llegada y salida)'
+      minItems:
+        'reservations/dates solo debe contener dos fechas (llegada y salida)',
+      maxItems:
+        'reservations/dates solo debe contener dos fechas (llegada y salida)'
     }
   },
   errorMessage: 'reservations debe ser un array de pares de fechas.'

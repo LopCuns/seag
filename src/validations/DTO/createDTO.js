@@ -12,7 +12,12 @@ const createDTO = (schema, formats) => {
 
   return (req, res, next) => {
     const isValidDTO = validator(req.body)
-    if (!isValidDTO) return BADREQUEST(res, validator.errors.map(err => err.message))
+    if (!isValidDTO) {
+      return BADREQUEST(
+        res,
+        validator.errors.map((err) => err.message)
+      )
+    }
     next()
   }
 }
