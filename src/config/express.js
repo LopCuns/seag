@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 import addRoomDTO from '#Validations/DTO/addRoom.dto.js'
 import emptyBodyDTO from '#Validations/DTO/emptyBody.dto.js'
 import reserveDTO from '#Validations/DTO/reserve.dto.js'
@@ -10,6 +11,7 @@ import reserveController from '#Controllers/reserve.controller.js'
 import deleteRoomController from '#Controllers/deleteRoom.controller.js'
 const expressApp = express()
 
+expressApp.use(cors())
 expressApp.use(express.json())
 
 expressApp.post('/addRoom', addRoomDTO, addRoomController)
