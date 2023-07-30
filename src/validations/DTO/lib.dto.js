@@ -25,6 +25,15 @@ const dateSchema = {
   }
 }
 
+const emailSchema = {
+  type: 'string',
+  format: 'email',
+  errorMessage: {
+    type: typeError('email', 'email(correo electrónico)'),
+    format: 'email debe cumplir con el formato email.'
+  }
+}
+
 const reservationsSchema = {
   type: 'array',
   items: {
@@ -32,11 +41,11 @@ const reservationsSchema = {
     minItems: 2,
     maxItems: 2,
     items: {
-      type: 'string',
-      format: 'date',
-      errorMessage: {
-        type: typeError('Date', 'date(fecha)'),
-        format: 'Date debe cumplir con el formato fecha RFC3339'
+      type: 'object',
+      properties: {
+        arriveDate: dateSchema,
+        departureDate: dateSchema,
+        guestEmail: emailSchema
       }
     },
     errorMessage: {
@@ -50,4 +59,4 @@ const reservationsSchema = {
   errorMessage: 'reservations debe ser un array de pares de fechas.'
 }
 
-export { roomTypeSchema, roomNameSchema, dateSchema, reservationsSchema }
+export { roomTypeSchema, roomNameSchema, dateSchema, emailSchema, reservationsSchema }

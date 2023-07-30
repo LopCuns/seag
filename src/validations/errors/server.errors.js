@@ -8,5 +8,5 @@ export const UNAUTHORIZED = (
 ) => res.status(401).send({ errormsg })
 export const NOTFOUND = (res, errormsg = 'Información no encontrada.') =>
   res.status(404).send({ errormsg })
-export const CONFLIT = (res, errormsg = 'Error de conflicto.') =>
+export const CONFLICT = (res, errormsg = 'Error de conflicto.') =>
   res.status(409).send({ errormsg })

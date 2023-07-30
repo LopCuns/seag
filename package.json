@@ -38,6 +38,8 @@
     "#Config/*": "./src/config/*",
     "#Controllers/*": "./src/controllers/*",
     "#Schemas/*": "./src/schemas/*",
-    "#Validations/*": "./src/validations/*"
+    "#Validations/*": "./src/validations/*",
+    "#Lib/*": "./src/lib/*"
+
   }
 }
